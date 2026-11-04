@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "realtime-voice-assistant"
+version = "0.1.0"
+description = "Production-ready real-time two-way voice streaming assistant with Gemini Live API"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Developer" }
+]
+dependencies = [
+    "sounddevice>=0.4.6",
+    "numpy>=1.24.0",
+    "websockets>=12.0",
+    "rich>=13.0.0",
+    "typer>=0.9.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+realtime-voice-assistant = "src.cli:app"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
