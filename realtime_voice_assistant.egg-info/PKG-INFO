@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: realtime-voice-assistant
+Version: 0.1.0
+Summary: Production-ready real-time two-way voice streaming assistant with Gemini Live API
+Author: Developer
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: sounddevice>=0.4.6
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: websockets>=12.0
+Requires-Dist: rich>=13.0.0
+Requires-Dist: typer>=0.9.0
+Requires-Dist: pydantic>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23.0; extra == "dev"

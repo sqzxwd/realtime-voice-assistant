@@ -1,0 +1,2 @@
+[console_scripts]
+realtime-voice-assistant = src.cli:app
